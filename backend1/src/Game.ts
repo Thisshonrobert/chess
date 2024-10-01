@@ -28,7 +28,6 @@ export class Game {
     }))
     }
     makeMove(socket:WebSocket,move:{from:string,to:string}){
-        console.log(this.movesCount)
         if(this.movesCount%2==0 && socket!=this.player1) return; //ensure white moves first
         if(this.movesCount%2==1 && socket!=this.player2) return; // then the  black
         try{
